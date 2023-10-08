@@ -1,6 +1,7 @@
 require('dotenv').config();
 require('app-module-path').addPath(__dirname);
 
+
 // requirements
 const createError = require('http-errors');
 const express = require('express');
@@ -12,10 +13,10 @@ const mongoose = require('mongoose');
 
 
 // routers
-var indexRouter = require('./routes/index');
+const indexRouter = require('./routes/index');
 
 // initialization
-var app = express();
+const app = express();
 
 
 // Connect to mongo via mongoose

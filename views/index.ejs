@@ -7,5 +7,15 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+
+
+    <h1>List of Dogs</h1>
+    <ul>
+      <% dogs.forEach((dog) => { %>
+      <li><%= dog.name %></li>
+      <% }) %>
+    </ul>
+    
+
   </body>
 </html>
