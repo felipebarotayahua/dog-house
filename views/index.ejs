@@ -7,12 +7,33 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
-
+    <h1>Add a New Dog</h1>
+    <form action="/" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required><br>
+        
+        <label for="breed">Breed:</label>
+        <input type="text" name="breed" id="breed" required><br>
+        
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" required><br>
+        
+        <label for="gender">Gender:</label>
+        <select name="gender" id="gender" required>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+        </select><br>
+        
+        <label for="treat">Treats:</label>
+        <input type="text" name="treat" id="treat" required><br>
+        
+        <input type="submit" value="Add Dog">
+    </form>
 
     <h1>List of Dogs</h1>
     <ul>
       <% dogs.forEach((dog) => { %>
-      <li><%= dog.name %></li>
+      <li><%= dog.name %> - <%= dog.breed %> - <%= dog.gender %> - <%= dog.treat %> - <%= dog.age %></li>
       <% }) %>
     </ul>
     
