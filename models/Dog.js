@@ -13,7 +13,7 @@ const DogSchema = new Schema({
     trim: true
   },
   age: {
-    type: String,
+    type: Number,
     required: true
   },
   gender: {
