@@ -10,7 +10,8 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-
+const swaggerUi = require('swagger-ui-express');
+const swaggerFile = require('services/swagger_output.json');
 
 // routers
 const indexRouter = require('./routes/index');
@@ -39,6 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use('/', indexRouter);
 app.use('/api/v1', apiRouter);
+app.use('/api/v1/docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 
 // catch 404 and forward to error handler
