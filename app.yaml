@@ -1,0 +1,5 @@
+runtime: nodejs18
+env: standard
+
+env_variables: 
+  MONGO_CONNECTION_STRING: "mongodb+srv://doghouse:Downtown1@cluster0.lixmsbk.mongodb.net/dog_database?retryWrites=true&w=majority&appName=AtlasApp"
