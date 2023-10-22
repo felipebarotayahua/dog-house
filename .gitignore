@@ -61,3 +61,5 @@ typings/
 .next
 # ignore this
 node_modules
+
+app.yaml
